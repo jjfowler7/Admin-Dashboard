@@ -3,6 +3,7 @@
 :root {
     --menu-font: Roboto;
     --menu-text: white;
+    --body: #e2e8f0;
 }
 
 body, html {
@@ -12,7 +13,6 @@ body, html {
 }
 
 #wrapper {
-    background-color: white;
     height: 100%;
     display: grid;
     margin: 0px 175px;
@@ -25,48 +25,89 @@ body, html {
     background-color: white;
     grid-column: 2;
     grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.top {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: .25fr 2fr .25fr .25fr .5fr;
+    align-items: center;
+
+}
+
+.top>p {
+    font-family: var(--menu-font);
+    font-weight: 500;
+
+}
+
+.bell {
+    justify-self: end;
+    padding-right: 15px;
+}
+
+.profile {
+    justify-self: center;
+}
+
+.magnify {
+    justify-self: end;
+    padding-right: 10px;
+}
+
+.search {
+    background-color: var(--body);
+    border-style: none;
+    border-radius: 25px;
+    width: 500px;
+    height: 25px;
+
 }
 
 .side-menu {
     display: flex;
     flex-direction: column;
+    grid-column: 1;
+    grid-row: span 2;
     background-color: #1992d3;
     color: var(--menu-text);
     font-family: var(--menu-font);
     font-weight: 500;
-    font:medium;
     font-size: 1.15rem;
-    grid-column: 1;
-    grid-row: span 2;
     padding-left: 20px;
-
 }
 
-.logo, .menu-options, .helper-option{
+.logo, .menu-options, .helper-option {
     display: flex;
 }
 
-.logo{
+.logo>p {
     font-size: 1.4rem;
 }
 
-img{
+img {
     align-self: center;
 }
 
-p{
-    margin: 15px;
-    
+p {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.side-menu > :nth-child(8){
+.side-menu> :nth-child(8) {
     margin-top: 35px;
 }
 
-.logo{
+.logo {
     margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .body {
-    background-color: #e2e8f0;
+    background-color: var(--body);
 }
